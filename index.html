@@ -1,297 +1,369 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!--Boxicons added-->
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
-  <title>PhotoFolio Bootstrap Template - Index</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <link rel="stylesheet" href="style.css" />
+    <title>ArtWeb</title>
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        transition: all 0.2s linear;
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+      .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 0vh;
+        background: rgba(39, 39, 39, 0.4);
+      }
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+      .gallery {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 88%;
+        margin-left: 160px;
+        margin-top: 95px;
+      }
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+      .gallery a {
+        height: 200px;
+        width: 300px;
+        margin: 20px;
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0 3px 5px #000;
+      }
 
-  <!-- =======================================================
-  * Template Name: PhotoFolio
-  * Updated: Jan 29 2024 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/photofolio-bootstrap-photography-website-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-</head>
+      .gallery a img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
 
-<body>
+      .gallery a:hover {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid d-flex align-items-center justify-content-between">
+  <body>
+    <div class="discovery-menu" id="discover">
+      <!-- Discovery List -->
+      <nav>
+        <ul>
+          <li>
+            <a href="#"> <i class="bx bxs-brush"></i><span>Discover</span> </a>
+          </li>
 
-      <a href="index.html" class="logo d-flex align-items-center  me-auto me-lg-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <i class="bi bi-camera"></i>
-        <h1>PhotoFolio</h1>
+          <li>
+            <a href="abstract.html" class="link">
+              <i class="bx bxs-chevron-right"></i><span>Abstract</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="animal_wildlife.html" class="link">
+              <i class="bx bxs-chevron-right"></i><span>Animals</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="anime_manga.html" class="link">
+              <i class="bx bxs-chevron-right"></i><span>Anime & Manga</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="architecture.html" class="link">
+              <i class="bx bxs-chevron-right"></i><span>Architecture</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="blender.html" class="link">
+              <i class="bx bxs-chevron-right"></i><span>Blender</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="character_design.html" class="link">
+              <i class="bx bxs-chevron-right"></i><span>Characters</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="comics.html" class="link">
+              <i class="bx bxs-chevron-right"></i><span>Comics</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="fan_art.html" class="link">
+              <i class="bx bxs-chevron-right"></i><span>Fan Art</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="fantasy.html" class="link">
+              <i class="bx bxs-chevron-right"></i><span>Fantasy</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="fasion_design.html" class="link">
+              <i class="bx bxs-chevron-right"></i><span>Fasion Design</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="game_art.html" class="link">
+              <i class="bx bxs-chevron-right"></i><span>Game Art</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="horror.html" class="link">
+              <i class="bx bxs-chevron-right"></i><span>Horror</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="portrait.html" class="link">
+              <i class="bx bxs-chevron-right"></i><span>Portrait</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="realism.html" class="link">
+              <i class="bx bxs-chevron-right"></i><span>Realism</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="sketches.html" class="link">
+              <i class="bx bxs-chevron-right"></i><span>Sketches</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="still_life.html" class="link">
+              <i class="bx bxs-chevron-right"></i><span>Still Life</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="storyboard.html" class="link">
+              <i class="bx bxs-chevron-right"></i><span>StoryBoard</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Logo-->
+
+    <div class="logo_wrapper">
+      <nav class="nav">
+        <div class="nav-logo">
+          <p>ArtWeb</p>
+        </div>
+
+        <!----------------------------- Main Menus ----------------------------------->
+
+        <div class="nav-menu" id="navMenu">
+          <ul>
+            <li><a href="index.html" class="link active">Home</a></li>
+
+            <li><a href="comission.html" class="link ">Comission/Job</a></li>
+
+            <li><a href="tutorials.html" class="link">Tutorials</a></li>
+
+
+            <li><a href="my-profile.html" class="link">MyProfile</a></li>
+          </ul>
+        </div>
+
+        <!----------------------------- Login/Register Buttons ----------------------------------->
+
+        <div class="nav-button">
+          <button class="btn white-btn" id="loginBtn" onclick="login()">
+            Login
+          </button>
+
+          <button class="btn" id="registerBtn" onclick="register()">
+            Register
+          </button>
+        </div>
+
+        <div class="nav-menu-btn">
+          <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+      </nav>
+    </div>
+    <!----------------------------- End of Login/Register Buttons ----------------------------------->
+
+    <div class="gallery">
+      <a href="Images/Discover Page/Abstract/abstract_1.jpg">
+        <img src="Images/Discover Page/Abstract/abstract_1.jpg" alt="" />
       </a>
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li class="dropdown"><a href="#"><span>Gallery</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="gallery.html">Nature</a></li>
-              <li><a href="gallery.html">People</a></li>
-              <li><a href="gallery.html">Architecture</a></li>
-              <li><a href="gallery.html">Animals</a></li>
-              <li><a href="gallery.html">Sports</a></li>
-              <li><a href="gallery.html">Travel</a></li>
-              <li class="dropdown"><a href="#"><span>Sub Menu</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                <ul>
-                  <li><a href="#">Sub Menu 1</a></li>
-                  <li><a href="#">Sub Menu 2</a></li>
-                  <li><a href="#">Sub Menu 3</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav><!-- .navbar -->
+      <a href="Images/Discover Page/Animals/animal_2.jpg">
+        <img src="Images/Discover Page/Animals/animal_2.jpg" alt="" />
+      </a>
+      <a href="Images/Discover Page/Abstract/abstract_3.jpg">
+        <img src="Images/Discover Page/Abstract/abstract_3.jpg" alt="" />
+      </a>
 
-      <div class="header-social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-      </div>
-      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      <a href="Images/Discover Page/Anime/anime_1.jpg">
+        <img src="Images/Discover Page/Anime/anime_1.jpg" alt="" />
+      </a>
+      <a href="Images/Discover Page/Animals/animal_1.jpg">
+        <img src="Images/Discover Page/Animals/animal_1.jpg" alt="" />
+      </a>
 
+      <a href="Images/Discover Page/Abstract/abstract_6.jpg">
+        <img src="Images/Discover Page/Abstract/abstract_6.jpg" alt="" />
+      </a>
+
+      <a href="Images/Discover Page/Animals/animal_6.jpg">
+        <img src="Images/Discover Page/Animals/animal_6.jpg" alt="" />
+      </a>
+
+      <a href="Images/Discover Page/Abstract/abstract_2.jpg">
+        <img src="Images/Discover Page/Abstract/abstract_2.jpg" alt="" />
+      </a>
+      <a href="Images/Discover Page/Animals/animal_4.jpg">
+        <img src="Images/Discover Page/Animals/animal_4.jpg" alt="" />
+      </a>
+
+      <a href="Images/Discover Page/Abstract/abstract_4.jpg">
+        <img src="Images/Discover Page/Abstract/abstract_4.jpg" alt="" />
+      </a>
+      <a href="Images/Discover Page/Abstract/abstract_5.jpg">
+        <img src="Images/Discover Page/Anime/anime_2.jpg" alt="" />
+      </a>
+
+      <a href="Images/Discover Page/Abstract/abstract_6.jpg">
+        <img src="Images/Discover Page/Abstract/abstract_6.jpg" alt="" />
+      </a>
+
+      <a href="Images/Discover Page/Abstract/abstract_1.jpg">
+        <img src="Images/Discover Page/Abstract/abstract_1.jpg" alt="" />
+      </a>
+
+      <a href="Images/Discover Page/Abstract/abstract_2.jpg">
+        <img src="Images/Discover Page/Abstract/abstract_2.jpg" alt="" />
+      </a>
+      <a href="Images/Discover Page/Abstract/abstract_3.jpg">
+        <img src="Images/Discover Page/Anime/anime_1.jpg" alt="" />
+      </a>
+
+      <a href="Images/Discover Page/Abstract/abstract_4.jpg">
+        <img src="Images/Discover Page/Abstract/abstract_4.jpg" alt="" />
+      </a>
+      <a href="Images/Discover Page/Abstract/abstract_5.jpg">
+        <img src="Images/Discover Page/Abstract/abstract_5.jpg" alt="" />
+      </a>
+
+      <a href="Images/Discover Page/Animals/animal_4.jpg">
+        <img src="Images/Discover Page/Animals/animal_4.jpg" alt="" />
+      </a>
+
+      <a href="Images/Discover Page/Anime/anime_1.jpg">
+        <img src="Images/Discover Page/Anime/anime_1.jpg" alt="" />
+      </a>
+      <a href="Images/Discover Page/Abstract/abstract_3.jpg">
+        <img src="Images/Discover Page/Abstract/abstract_3.jpg" alt="" />
+      </a>
+
+      <a href="Images/Discover Page/Abstract/abstract_4.jpg">
+        <img src="Images/Discover Page/Abstract/abstract_4.jpg" alt="" />
+      </a>
+      <a href="Images/Discover Page/Abstract/abstract_5.jpg">
+        <img src="Images/Discover Page/Abstract/abstract_5.jpg" alt="" />
+      </a>
+
+      <a href="Images/Discover Page/Abstract/abstract_6.jpg">
+        <img src="Images/Discover Page/Abstract/abstract_6.jpg" alt="" />
+      </a>
+
+      <a href="Images/Discover Page/Animals/animal_6.jpg">
+        <img src="Images/Discover Page/Animals/animal_6.jpg" alt="" />
+      </a>
+
+      <a href="Images/Discover Page/Abstract/abstract_2.jpg">
+        <img src="Images/Discover Page/Abstract/abstract_2.jpg" alt="" />
+      </a>
+
+      <a href="Images/Discover Page/Animals/animal_4.jpg">
+        <img src="Images/Discover Page/Animals/animal_4.jpg" alt="" />
+      </a>
+
+      <a href="Images/Discover Page/Abstract/abstract_4.jpg">
+        <img src="Images/Discover Page/Abstract/abstract_4.jpg" alt="" />
+      </a>
+
+      <a href="Images/Discover Page/Abstract/abstract_5.jpg">
+        <img src="Images/Discover Page/Abstract/abstract_5.jpg" alt="" />
+      </a>
+
+      <a href="Images/Discover Page/Animals/animal_2.jpg">
+        <img src="Images/Discover Page/Animals/animal_2.jpg" alt="" />
+      </a>
+
+      <a href="Images/Discover Page/Abstract/abstract_4.jpg">
+        <img src="Images/Discover Page/Abstract/abstract_4.jpg" alt="" />
+      </a>
+      <a href="Images/Discover Page/Abstract/abstract_5.jpg">
+        <img src="Images/Discover Page/Abstract/abstract_5.jpg" alt="" />
+      </a>
+
+      <a href="Images/Discover Page/Abstract/abstract_6.jpg">
+        <img src="Images/Discover Page/Abstract/abstract_6.jpg" alt="" />
+      </a>
     </div>
-  </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero d-flex flex-column justify-content-center align-items-center" data-aos="fade" data-aos-delay="1500">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-6 text-center">
-          <h2>I'm <span>Jenny Wilson</span> a Professional Photographer from New York City</h2>
-          <p>Blanditiis praesentium aliquam illum tempore incidunt debitis dolorem magni est deserunt sed qui libero. Qui voluptas amet.</p>
-          <a href="contact.html" class="btn-get-started">Available for hire</a>
-        </div>
-      </div>
-    </div>
-  </section><!-- End Hero Section -->
+    <!----------- Functional Login/Register --------------->
+    <script>
+      function myMenuFunction() {
+        var i = document.getElementById("navMenu");
+        if (i.className === "nav-menu") {
+          i.className += " responsive";
+        } else {
+          i.className = "nav-menu";
+        }
+      }
+    </script>
 
-  <main id="main" data-aos="fade" data-aos-delay="1500">
+    <script>
+      var a = document.getElementById("loginBtn");
+      var b = document.getElementById("registerBtn");
+      var x = document.getElementById("login");
+      var y = document.getElementById("register");
 
-    <!-- ======= Gallery Section ======= -->
-    <section id="gallery" class="gallery">
-      <div class="container-fluid">
-
-        <div class="row gy-4 justify-content-center">
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-1.jpg" class="img-fluid" alt="">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/gallery-1.jpg" title="Gallery 1" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div><!-- End Gallery Item -->
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-2.jpg" class="img-fluid" alt="">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/gallery-2.jpg" title="Gallery 2" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div><!-- End Gallery Item -->
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-3.jpg" class="img-fluid" alt="">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/gallery-3.jpg" title="Gallery 3" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div><!-- End Gallery Item -->
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-4.jpg" class="img-fluid" alt="">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/gallery-4.jpg" title="Gallery 4" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div><!-- End Gallery Item -->
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-5.jpg" class="img-fluid" alt="">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/gallery-5.jpg" title="Gallery 5" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div><!-- End Gallery Item -->
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-6.jpg" class="img-fluid" alt="">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/gallery-6.jpg" title="Gallery 6" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div><!-- End Gallery Item -->
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-7.jpg" class="img-fluid" alt="">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/gallery-7.jpg" title="Gallery 7" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div><!-- End Gallery Item -->
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-8.jpg" class="img-fluid" alt="">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/gallery-8.jpg" title="Gallery 8" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div><!-- End Gallery Item -->
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-9.jpg" class="img-fluid" alt="">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/gallery-9.jpg" title="Gallery 9" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div><!-- End Gallery Item -->
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-10.jpg" class="img-fluid" alt="">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/gallery-10.jpg" title="Gallery 10" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div><!-- End Gallery Item -->
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-11.jpg" class="img-fluid" alt="">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/gallery-11.jpg" title="Gallery 11" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div><!-- End Gallery Item -->
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-12.jpg" class="img-fluid" alt="">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/gallery-12.jpg" title="Gallery 12" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div><!-- End Gallery Item -->
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-13.jpg" class="img-fluid" alt="">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/gallery-13.jpg" title="Gallery 13" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div><!-- End Gallery Item -->
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-14.jpg" class="img-fluid" alt="">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/gallery-14.jpg" title="Gallery 14" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div><!-- End Gallery Item -->
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-15.jpg" class="img-fluid" alt="">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/gallery-15.jpg" title="Gallery 15" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div><!-- End Gallery Item -->
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-16.jpg" class="img-fluid" alt="">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/gallery-16.jpg" title="Gallery 16" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div><!-- End Gallery Item -->
-
-        </div>
-
-      </div>
-    </section><!-- End Gallery Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>PhotoFolio</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/photofolio-bootstrap-photography-website-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-
-  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <div id="preloader">
-    <div class="line"></div>
-  </div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
-
+      function login() {
+        window.location.href = "home_menu.html";
+      }
+      function register() {
+        window.location.href = "home_menu.html";
+      }
+    </script>
+  </body>
 </html>

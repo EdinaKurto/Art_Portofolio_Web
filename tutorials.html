@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--Boxicons added-->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="tutorial-style.css" />
+    <title>ArtWeb</title>
+  </head>
+
+  <body>
+
+    <!-- Logo-->
+    <div class="logo_wrapper">
+      <nav class="nav">
+        <div class="nav-logo">
+          <p>ArtWeb</p>
+        </div>
+
+        <!----------------------------- Main Menus ----------------------------------->
+
+        <div class="nav-menu" id="navMenu">
+          <ul>
+            <li><a href="index.html" class="link">Home</a></li>
+
+            <li><a href="comission.html" class="link ">Comission/Job</a></li>
+
+
+            <li><a href="tutorials.html" class="link active">Tutorials</a></li>
+
+            <li><a href="my-profile.html" class="link">MyProfile</a></li>
+          </ul>
+        </div>
+
+        <!----------------------------- Login/Register Buttons ----------------------------------->
+
+        <div class="nav-button">
+          <button class="btn white-btn" id="loginBtn" onclick="login()">
+            Login
+          </button>
+          <button class="btn" id="registerBtn" onclick="register()">
+            Register
+          </button>
+        </div>
+        <div class="nav-menu-btn">
+          <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+      </nav>
+    </div>
+
+    <!----------------------------- End of Login/Register Buttons ----------------------------------->
+
+<!--- Tutorial 1 ------>
+    <div class="tutorial">
+      <div class="tutorialItem">
+        <figure>
+            <img class="tutorialImage" src="Images/Discover Page/Animals/animal_1.jpg"/>
+          <figcaption>
+            <a href="my-profile.html">
+              <img src="Images/My Proffile/Profile.png" width="64" height="64" />
+            </a>
+            <br />
+            <span>Tutorial on How to Create Graffiti <small> - by Edina Kurto</small></span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+<!--- Tutorial 2 ------>
+    <div class="tutorial">
+      <div class="tutorialItem">
+        <figure>
+          <img class="tutorialImage" src="Images/Discover Page/Abstract/abstract_1.jpg"/>
+          <figcaption>
+            <a href="my-profile.html">
+              <img src="Images/My Proffile/Profile.png" width="64" height="64" />
+            </a>
+            <br />
+            <span>Tutorial on How to Draw Abstract Art <small> - by Edina Kurto</small></span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+<!--- Tutorial 3 ------>
+    <div class="tutorial">
+      <div class="tutorialItem">
+        <figure>
+          <img class="tutorialImage" src="Images/Discover Page/Anime/anime_1.jpg"/>
+          <figcaption>
+            <a href="my-profile.html">
+              <img src="Images/My Proffile/Profile.png" width="64" height="64" />
+            </a>
+            <br />
+            <span>Tutorial on How to Animate <small> - by Edina Kurto</small></span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+<!--- Tutorial 4 ------>
+    <div class="tutorial">
+      <div class="tutorialItem">
+        <figure>
+          <img class="tutorialImage" src="Images/Discover Page/Animals/animal_2.jpg"/>
+          <figcaption>
+            <a href="my-profile.html">
+              <img src="Images/My Proffile/Profile.png" width="64" height="64" />
+            </a>
+            <br />
+            <span>Tutorial on How to Draw a Chicken <small> - by Edina Kurto</small></span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+
+<!----------------------------- Login/ Registration Menu ----------------------------------->
+    <script>
+      function myMenuFunction() {
+        var i = document.getElementById("navMenu");
+        if (i.className === "nav-menu") {
+          i.className += " responsive";
+        } else {
+          i.className = "nav-menu";
+        }
+      }
+    </script>
+    <script>
+      var a = document.getElementById("loginBtn");
+      var b = document.getElementById("registerBtn");
+      var x = document.getElementById("login");
+      var y = document.getElementById("register");
+
+      function login() {
+        window.location.href = "home_menu.html";
+      }
+      function register() {
+        window.location.href = "home_menu.html";
+      }
+    </script>
+  </body>
+</html>
