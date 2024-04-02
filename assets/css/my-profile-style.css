@@ -1,0 +1,110 @@
+/* -------------------------------------------------- Profile -----------------------------------------------------*/
+
+
+.profile {
+  padding-top: 100px;
+  top: 85px;
+  width: 100%;
+  height: 100vw;
+  overflow: scroll;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  color: white;
+}
+
+.profile-information {
+  padding-top: 10px;
+  padding-left: 10px;
+  font-size: 35px;
+}
+
+.profile-details {
+  display: flex;
+  padding: 0px;
+  background-color: #0000002a;
+  color: white;
+}
+
+/* -------------------------------------------------- Tabs -----------------------------------------------------*/
+
+.work-details {
+  padding: 0 20px 0 20px;
+  max-width: 25%;
+  background-color: #00000070;
+  width: 350px;
+  min-width: 350px;
+  height: 860px;
+
+}
+
+.work-details ul {
+  list-style: none;
+  line-height: 3;
+}
+.work-tabs {
+  display: flex;
+  background-color: #00000070;
+}
+.work-tab {
+  padding: 20px;
+  cursor: pointer;
+}
+
+.work-tab.active {
+  background-color: #6e6b6b56;
+}
+
+.work-content {
+  display: none;
+  overflow: hidden;
+}
+
+.work-content.active {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #00000070;
+  height: 800px;
+}
+
+/* --------------------------------------------------Tab Content -----------------------------------------------------*/
+.image-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.work-image {
+  height: 200px;
+  width: 400px;
+  margin: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 3px 5px #000;
+  object-fit: cover;
+}
+
+.tutorial_image {
+  height: 250px;
+  width: 650px;
+  margin: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 3px 5px #000;
+  object-fit: cover;
+}
+#editBtn {
+  margin-left: 15px;
+}
+
+.btn.edit-btn {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.btn.btn.edit-btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+}

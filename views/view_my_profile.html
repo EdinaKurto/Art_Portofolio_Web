@@ -1,0 +1,112 @@
+<head>
+  <link rel="stylesheet" href="assets/css/my-profile-style.css" />
+  <title>ArtWeb</title>
+</head>
+
+<body>
+
+  <section id="profile" class="profile">
+    <div class="profile-header">
+        <img id="profilePicture" alt="Profile Picture" class="profile-picture" style="height: 150px;">
+        
+        <div class="profile-information">
+          <span id="profileName"><strong>Firstname Lastname</strong></span>
+          <br/>
+          <span id="profileShortDesc">ShortDesc</span>
+        </div>
+    </div>
+
+    <div class="profile-details">
+      <div class="work-details">
+
+          <h2>ABOUT ME</h2>
+          <ul>
+            <li><strong>Profession:</strong> <span id="profileProfession">Example Text</span></li>
+            <li><strong>Age:</strong> <span id="profileAge">21</span></li>
+            <li><strong>ProgrammingSkills:</strong> <span id="profileProgrammingSkills">Example Text</span></li>
+            <li><strong>ArtSkills:</strong> <span id="profileArtSkills">Example Text</span></li>
+            <li><strong>Info:</strong> <span id="profileInfo">Example Text</span></li>
+          </ul>
+      </div>
+
+      <!----------------------------- The Function Tab ----------------------------------->
+      <div class="work-images">
+          <div class="work-tabs">
+              <div class="work-tab active" onclick="openTab('artwork')">Artworks</div>
+          </div>
+
+          <!------- Artwork -------->
+          <div id="profile-images">
+            
+            <!-- Images will be dynamically loaded here -->
+          </div>
+          <template id="profile-image-template">
+            <div class="profile-image">
+              <img class="profile-image-img" src="" alt="Profile Image"/>
+            </div>
+          </template>
+          
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function openTab(tabName) {
+        var i;
+        var tabs = document.getElementsByClassName("work-tab");
+        var contents = document.getElementsByClassName("work-content");
+        for (i = 0; i < tabs.length; i++) {
+            tabs[i].classList.remove("active");
+            contents[i].classList.remove("active");
+        }
+        document.getElementById(tabName).classList.add("active");
+        event.currentTarget.classList.add("active");
+    }
+  </script>
+  <!----------------------------- The Info Grabber Script ----------------------------------->
+  <!--<script>
+    const currentURL = window.location.href;
+    if (currentURL.includes("#view_my_profile?userProfile=1")) {
+      userProfile = data[1];
+    }-->
+  </script>
+  <script>
+    fetch('assets/json/user_profile.json')
+      .then(response => response.json())
+      .then(data => {
+        // Check to see if correct data is displayed
+        console.log("Data:", data);
+        const userProfile = data[0];
+        console.log("User Profile:", userProfile);
+        
+        
+        document.getElementById('profileName').innerText = `${userProfile.Firstname} ${userProfile.Lastname}`;
+        document.getElementById('profileShortDesc').innerText = userProfile.ShortDesc;
+        document.getElementById('profileProfession').innerText = userProfile.Profession;
+        document.getElementById('profileAge').innerText = userProfile.Age;
+        document.getElementById('profileProgrammingSkills').innerText = userProfile.ProgrammingSkill;
+        document.getElementById('profileArtSkills').innerText = userProfile.ArtSkill;
+        document.getElementById('profileInfo').innerText = userProfile.Info;
+        document.getElementById('profilePicture').src = `Images/My Proffile/${userProfile["User ID"]}.png`;
+
+        const images = userProfile.Images;
+        const template = document.getElementById('profile-image-template');
+        const parent = document.getElementById('profile-images');
+
+        parent.innerHTML = '';
+
+        images.forEach(image => {
+          const clone = template.content.cloneNode(true);
+          const img = clone.querySelector('.profile-image-img');
+          img.src = image;
+          parent.appendChild(clone);
+        })
+        
+        /*accountData[userId].images.map(image => `/Images/${userId}/${image}`).forEach(imagePath => {
+          const imageNode = document.findElementById("image-template").cloneNode();
+          imageNode.findElementById("image").src = imagePath;
+        })*/
+      })
+      .catch(error => console.error('Error fetching user profile:', error)); // Hope not
+  </script>
+</body>

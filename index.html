@@ -6,12 +6,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/spapp.css" />
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"  integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <script src="assets/js/jquery.spapp.js"></script>
+    <script src="assets/js/custom.js"></script>
+    
+
     <title>ArtWeb</title>
 
     <style>
@@ -31,152 +33,33 @@
         min-height: 0vh;
         background: rgba(39, 39, 39, 0.4);
       }
-
-      .gallery {
+      /* ----Banner----- */
+      .banner {
         position: relative;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        width: 88%;
-        margin-left: 160px;
-        margin-top: 95px;
-      }
-
-      .gallery a {
-        height: 200px;
-        width: 300px;
-        margin: 20px;
-        border-radius: 5px;
-        overflow: hidden;
-        box-shadow: 0 3px 5px #000;
-      }
-
-      .gallery a img {
-        height: 100%;
         width: 100%;
-        object-fit: cover;
+        height: 500px;
+        overflow: hidden;
+        float: left;
       }
 
-      .gallery a:hover {
-        transform: scale(1.1);
+      .banner img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .banner .text {
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        transform: translateY(-50%);
+        color: white;
+        font-size: 28px;
       }
     </style>
   </head>
 
   <body>
-    <div class="discovery-menu" id="discover">
-      <!-- Discovery List -->
-      <nav>
-        <ul>
-          <li>
-            <a href="#"> <i class="bx bxs-brush"></i><span>Discover</span> </a>
-          </li>
-
-          <li>
-            <a href="abstract.html" class="link">
-              <i class="bx bxs-chevron-right"></i><span>Abstract</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="animal_wildlife.html" class="link">
-              <i class="bx bxs-chevron-right"></i><span>Animals</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="anime_manga.html" class="link">
-              <i class="bx bxs-chevron-right"></i><span>Anime & Manga</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="architecture.html" class="link">
-              <i class="bx bxs-chevron-right"></i><span>Architecture</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="blender.html" class="link">
-              <i class="bx bxs-chevron-right"></i><span>Blender</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="character_design.html" class="link">
-              <i class="bx bxs-chevron-right"></i><span>Characters</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="comics.html" class="link">
-              <i class="bx bxs-chevron-right"></i><span>Comics</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="fan_art.html" class="link">
-              <i class="bx bxs-chevron-right"></i><span>Fan Art</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="fantasy.html" class="link">
-              <i class="bx bxs-chevron-right"></i><span>Fantasy</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="fasion_design.html" class="link">
-              <i class="bx bxs-chevron-right"></i><span>Fasion Design</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="game_art.html" class="link">
-              <i class="bx bxs-chevron-right"></i><span>Game Art</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="horror.html" class="link">
-              <i class="bx bxs-chevron-right"></i><span>Horror</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="portrait.html" class="link">
-              <i class="bx bxs-chevron-right"></i><span>Portrait</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="realism.html" class="link">
-              <i class="bx bxs-chevron-right"></i><span>Realism</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="sketches.html" class="link">
-              <i class="bx bxs-chevron-right"></i><span>Sketches</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="still_life.html" class="link">
-              <i class="bx bxs-chevron-right"></i><span>Still Life</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="storyboard.html" class="link">
-              <i class="bx bxs-chevron-right"></i><span>StoryBoard</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-
     <!-- Logo-->
 
     <div class="logo_wrapper">
@@ -186,159 +69,40 @@
         </div>
 
         <!----------------------------- Main Menus ----------------------------------->
-
-        <div class="nav-menu" id="navMenu">
+        <nav role="navigation" class="nav-menu">
           <ul>
-            <li><a href="index.html" class="link active">Home</a></li>
+            <li><a class="link" href="#view_home">Home</a></li>
+            <li><a class="link" href="#view_comissions">Comission/Job</a></li>
+            <li><a class="link" href="#view_tutorials">Tutorials</a></li>
+            <li><a class="link" href="#view_my_profile">My Profile</a></li>
 
-            <li><a href="comission.html" class="link ">Comission/Job</a></li>
-
-            <li><a href="tutorials.html" class="link">Tutorials</a></li>
-
-
-            <li><a href="my-profile.html" class="link">MyProfile</a></li>
           </ul>
-        </div>
+        </nav>
 
         <!----------------------------- Login/Register Buttons ----------------------------------->
 
         <div class="nav-button">
-          <button class="btn white-btn" id="loginBtn" onclick="login()">
-            Login
-          </button>
-
-          <button class="btn" id="registerBtn" onclick="register()">
-            Register
-          </button>
+          <button class="btn white-btn" id="loginBtn" onclick="login()">Login</button>
+          <button class="btn" id="registerBtn" onclick="register()"> Register</button>
         </div>
 
-        <div class="nav-menu-btn">
-          <i class="bx bx-menu" onclick="myMenuFunction()"></i>
-        </div>
+        <div class="nav-menu-btn"><i class="bx bx-menu" onclick="myMenuFunction()"></i></div>
       </nav>
     </div>
     <!----------------------------- End of Login/Register Buttons ----------------------------------->
 
-    <div class="gallery">
-      <a href="Images/Discover Page/Abstract/abstract_1.jpg">
-        <img src="Images/Discover Page/Abstract/abstract_1.jpg" alt="" />
-      </a>
+<!---------------------------------------SPAPP CODE THING------------------->
 
-      <a href="Images/Discover Page/Animals/animal_2.jpg">
-        <img src="Images/Discover Page/Animals/animal_2.jpg" alt="" />
-      </a>
-      <a href="Images/Discover Page/Abstract/abstract_3.jpg">
-        <img src="Images/Discover Page/Abstract/abstract_3.jpg" alt="" />
-      </a>
+    <main id="spapp" role="main">
+      <section id="view_home" data-load="view_home.html"></section>
+      <section id="view_comissions" data-load="view_comissions.html"></section>
+      <section id="error_404"><h1>Page not found</h1></section>
+      <section id="view_tutorials" data-load="view_tutorials.html"></section>
+      <section id="view_my_profile" data-load="view_my_profile.html"></section>
 
-      <a href="Images/Discover Page/Anime/anime_1.jpg">
-        <img src="Images/Discover Page/Anime/anime_1.jpg" alt="" />
-      </a>
-      <a href="Images/Discover Page/Animals/animal_1.jpg">
-        <img src="Images/Discover Page/Animals/animal_1.jpg" alt="" />
-      </a>
+    </main>
 
-      <a href="Images/Discover Page/Abstract/abstract_6.jpg">
-        <img src="Images/Discover Page/Abstract/abstract_6.jpg" alt="" />
-      </a>
 
-      <a href="Images/Discover Page/Animals/animal_6.jpg">
-        <img src="Images/Discover Page/Animals/animal_6.jpg" alt="" />
-      </a>
-
-      <a href="Images/Discover Page/Abstract/abstract_2.jpg">
-        <img src="Images/Discover Page/Abstract/abstract_2.jpg" alt="" />
-      </a>
-      <a href="Images/Discover Page/Animals/animal_4.jpg">
-        <img src="Images/Discover Page/Animals/animal_4.jpg" alt="" />
-      </a>
-
-      <a href="Images/Discover Page/Abstract/abstract_4.jpg">
-        <img src="Images/Discover Page/Abstract/abstract_4.jpg" alt="" />
-      </a>
-      <a href="Images/Discover Page/Abstract/abstract_5.jpg">
-        <img src="Images/Discover Page/Anime/anime_2.jpg" alt="" />
-      </a>
-
-      <a href="Images/Discover Page/Abstract/abstract_6.jpg">
-        <img src="Images/Discover Page/Abstract/abstract_6.jpg" alt="" />
-      </a>
-
-      <a href="Images/Discover Page/Abstract/abstract_1.jpg">
-        <img src="Images/Discover Page/Abstract/abstract_1.jpg" alt="" />
-      </a>
-
-      <a href="Images/Discover Page/Abstract/abstract_2.jpg">
-        <img src="Images/Discover Page/Abstract/abstract_2.jpg" alt="" />
-      </a>
-      <a href="Images/Discover Page/Abstract/abstract_3.jpg">
-        <img src="Images/Discover Page/Anime/anime_1.jpg" alt="" />
-      </a>
-
-      <a href="Images/Discover Page/Abstract/abstract_4.jpg">
-        <img src="Images/Discover Page/Abstract/abstract_4.jpg" alt="" />
-      </a>
-      <a href="Images/Discover Page/Abstract/abstract_5.jpg">
-        <img src="Images/Discover Page/Abstract/abstract_5.jpg" alt="" />
-      </a>
-
-      <a href="Images/Discover Page/Animals/animal_4.jpg">
-        <img src="Images/Discover Page/Animals/animal_4.jpg" alt="" />
-      </a>
-
-      <a href="Images/Discover Page/Anime/anime_1.jpg">
-        <img src="Images/Discover Page/Anime/anime_1.jpg" alt="" />
-      </a>
-      <a href="Images/Discover Page/Abstract/abstract_3.jpg">
-        <img src="Images/Discover Page/Abstract/abstract_3.jpg" alt="" />
-      </a>
-
-      <a href="Images/Discover Page/Abstract/abstract_4.jpg">
-        <img src="Images/Discover Page/Abstract/abstract_4.jpg" alt="" />
-      </a>
-      <a href="Images/Discover Page/Abstract/abstract_5.jpg">
-        <img src="Images/Discover Page/Abstract/abstract_5.jpg" alt="" />
-      </a>
-
-      <a href="Images/Discover Page/Abstract/abstract_6.jpg">
-        <img src="Images/Discover Page/Abstract/abstract_6.jpg" alt="" />
-      </a>
-
-      <a href="Images/Discover Page/Animals/animal_6.jpg">
-        <img src="Images/Discover Page/Animals/animal_6.jpg" alt="" />
-      </a>
-
-      <a href="Images/Discover Page/Abstract/abstract_2.jpg">
-        <img src="Images/Discover Page/Abstract/abstract_2.jpg" alt="" />
-      </a>
-
-      <a href="Images/Discover Page/Animals/animal_4.jpg">
-        <img src="Images/Discover Page/Animals/animal_4.jpg" alt="" />
-      </a>
-
-      <a href="Images/Discover Page/Abstract/abstract_4.jpg">
-        <img src="Images/Discover Page/Abstract/abstract_4.jpg" alt="" />
-      </a>
-
-      <a href="Images/Discover Page/Abstract/abstract_5.jpg">
-        <img src="Images/Discover Page/Abstract/abstract_5.jpg" alt="" />
-      </a>
-
-      <a href="Images/Discover Page/Animals/animal_2.jpg">
-        <img src="Images/Discover Page/Animals/animal_2.jpg" alt="" />
-      </a>
-
-      <a href="Images/Discover Page/Abstract/abstract_4.jpg">
-        <img src="Images/Discover Page/Abstract/abstract_4.jpg" alt="" />
-      </a>
-      <a href="Images/Discover Page/Abstract/abstract_5.jpg">
-        <img src="Images/Discover Page/Abstract/abstract_5.jpg" alt="" />
-      </a>
-
-      <a href="Images/Discover Page/Abstract/abstract_6.jpg">
-        <img src="Images/Discover Page/Abstract/abstract_6.jpg" alt="" />
-      </a>
-    </div>
 
     <!----------- Functional Login/Register --------------->
     <script>
@@ -365,5 +129,6 @@
         window.location.href = "home_menu.html";
       }
     </script>
+
   </body>
 </html>

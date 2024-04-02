@@ -9,8 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="my-profile-style.css">
+    <link rel="stylesheet" href="assets/css/my-profile-style.css">
     <title>ArtWeb</title>
+    <script src="assets/js/jquery.min.js"></script>\
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
 
@@ -24,19 +26,25 @@
 
         <!----------------------------- Main Menus ----------------------------------->
 
-        <div class="nav-menu" id="navMenu">
+        <nav role="navigation" class="nav-menu">
           <ul>
-            <li><a href="index.html" class="link">Home</a></li>
+            <li><a class="link" href="#view_home">Home</a></li>
+            <li><a class="link" href="#view_comissions">Comission/Job</a></li>
+            <li><a class="link" href="#view_tutorials">Tutorials</a></li>
+            <li><a class="link" href="#view_my_profile">My Profile</a></li>
 
-            <li><a href="comission.html" class="link">Comission/Job</a></li>
-
-
-            <li><a href="tutorials.html" class="link">Tutorials</a></li>
-
-            
-            <li><a href="my-profile.html" class="link active">MyProfile</a></li>
           </ul>
-        </div>
+        </nav>
+        <!---------------------------------------SPAPP CODE THING------------------->
+
+    <main id="spapp" role="main">
+      <section id="view_home" data-load="view_home.html"></section>
+      <section id="view_comissions" data-load="view_comissions.html"></section>
+      <section id="error_404"><h1>Page not found</h1></section>
+      <section id="view_tutorials" data-load="view_tutorials.html"></section>
+      <section id="view_my_profile" data-load="view_my_profile.html"></section>
+    </main>
+
 
         <!----------------------------- Login/Register Buttons ----------------------------------->
 
@@ -53,26 +61,28 @@
 
     <section id="profile" class="profile">
       <div class="profile-header">
-          <img src="Images/My Proffile/Profile.png" alt="Profile Picture" class="profile-picture" style="height: 150px;">
+          <img id="profilePicture" alt="Profile Picture" class="profile-picture" style="height: 150px;">
           
           <div class="profile-information">
-            <span><strong>Edina Kurto</strong></span>
+            <span><strong>Firstname Lastname</strong></span>
             <br/>
-            <span>Artist / Designer / Programmer</span>
+            <span>ShortDesc</span>
+            
           </div>
       </div>
 
       <div class="profile-details">
         <div class="work-details">
+
             <h2>ABOUT ME</h2>
             <ul>
-              <li><strong>Work:</strong> Freelancer</li>
+              <li><strong>Profession:</strong> Freelancer</li>
 
               <li><strong>Age:</strong> 21</li>
 
-              <li><strong>Programming Skill:</strong> Python, Java, HTML, C++</li>
+              <li><strong>ProgrammingSkills:</strong> Python, Java, HTML, C#, C++</li>
 
-              <li><strong>Art Skill:</strong> Photoshop, Blender, Unity, Unreal Engine</li>
+              <li><strong>ArtSkills:</strong> Photoshop, Blender, Unity, Unreal Engine</li>
 
               <li><strong>Info:</strong> Just a student trying to make a working website for college. Don't mind me..</li>
 
@@ -119,40 +129,8 @@
               <img src="Images/Discover Page/Abstract/abstract_3.jpg" alt="Work 3" class="tutorial_image">
 
             </div>
-
         </div>
       </div>
     </section>
-  
-    <script>
-      function openTab(tabName) {
-          var i;
-          var tabs = document.getElementsByClassName("work-tab");
-          var contents = document.getElementsByClassName("work-content");
-          for (i = 0; i < tabs.length; i++) {
-              tabs[i].classList.remove("active");
-              contents[i].classList.remove("active");
-          }
-          document.getElementById(tabName).classList.add("active");
-          event.currentTarget.classList.add("active");
-      }
-    </script>
-
-<script>
-  var a = document.getElementById("loginBtn");
-  var b = document.getElementById("registerBtn");
-  var x = document.getElementById("login");
-  var y = document.getElementById("register");
-
-  function login() {
-    window.location.href = "home_menu.html";
-  }
-  function register() {
-    window.location.href = "home_menu.html";
-  }
-</script>
-  
-
   </body>
-  
 </html>
