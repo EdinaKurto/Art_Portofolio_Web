@@ -1,0 +1,107 @@
+[
+
+    {
+        "Firstname": "Edina",
+        "Lastname": "Kurto",
+        "User ID": 0,
+        "ShortDesc": "I love art!",
+        "Profession": "Programmer",
+        "Age": 21,
+        "ProgrammingSkill": "C# and C++",
+        "ArtSkill": "Intermediate",
+        "Info": "I love my dog!!!",
+        "images": ["0.jpg", "1.jpg", "2.jpg"]
+    },
+
+    {
+        "Firstname": "Denis",
+        "Lastname": "Davison",
+        "User ID": 1,
+        "ShortDesc": "I love Programming!",
+        "Profession": "Artist",
+        "Age": 26,
+        "ProgrammingSkill": "Python, Java, C#",
+        "ArtSkill": "Advanced",
+        "Info": "I love dogs!!!",
+        "Images": ["0.jpg", "1.jpg", "2.jpg"]
+    },
+
+    {
+        "Firstname": "Anja",
+        "Lastname": "Šehovac",
+        "User ID": 2,
+        "ShortDesc": "Idk how to draw ducks!",
+        "Profession": "Programmer",
+        "Age": 21,
+        "ProgrammingSkill": "Java",
+        "ArtSkill": "Beginner",
+        "Info": "Just a random student",
+        "images": ["0.jpg", "1.jpg", "2.jpg"]
+    },
+
+    {
+        "Firstname": "David",
+        "Lastname": "Black",
+        "User ID": 3,
+        "ShortDesc": "I hate apples!",
+        "Profession": "Artist",
+        "Age": 26,
+        "ProgrammingSkill": "Python, Java, C#",
+        "ArtSkill": "Advanced",
+        "Info": "I love drawing landscapes!",
+        "Images": ["0.jpg", "1.jpg", "2.jpg", "3.jpg"]
+    },
+
+    {
+        "Firstname": "Ale",
+        "Lastname": "Luler",
+        "User ID": 4,
+        "ShortDesc": "I just a begginer artist...",
+        "Profession": "Programmer",
+        "Age": 21,
+        "ProgrammingSkill": "Java",
+        "ArtSkill": "Begginer",
+        "Info": "I am interested in learning new skills!",
+        "images": ["0.jpg", "1.jpg", "2.jpg"]
+    },
+
+    {
+        "Firstname": "Wolf",
+        "Lastname": "Woolfen",
+        "User ID": 5,
+        "ShortDesc": "I do art",
+        "Profession": "Artist",
+        "Age": 26,
+        "ProgrammingSkill": "None",
+        "ArtSkill": "Advanced",
+        "Info": "I love portraits!",
+        "Images": ["0.jpg", "1.jpg", "2.jpg"]
+    },
+
+    {
+        "Firstname": "Arda",
+        "Lastname": "Duck",
+        "User ID": 6,
+        "ShortDesc": "I like to draw ducks!",
+        "Profession": "Artist",
+        "Age": 21,
+        "ProgrammingSkill": "None",
+        "ArtSkill": "Advanced",
+        "Info": "Just a guy drawing ducks.. a lot of ducks",
+        "images": ["0.jpg", "1.jpg", "2.jpg"]
+    },
+
+    {
+        "Firstname": "Afan",
+        "Lastname": "White",
+        "User ID": 7,
+        "ShortDesc": "I hate anatomy!",
+        "Profession": "Artist",
+        "Age": 26,
+        "ProgrammingSkill": "Python, C#",
+        "ArtSkill": "Advanced",
+        "Info": "I love drawing storyboards!",
+        "Images": ["0.jpg", "1.jpg", "2.jpg"]
+    }
+
+]

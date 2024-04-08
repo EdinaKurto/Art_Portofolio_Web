@@ -1,5 +1,8 @@
 /* -------------------------------------------------- Profile -----------------------------------------------------*/
 
+*{
+  overflow: scroll;
+}
 .profile {
   padding-top: 100px;
   top: 85px;
@@ -95,4 +98,15 @@
   overflow: hidden;
   box-shadow: 0 3px 5px #000;
   object-fit: cover;
+}
+#editBtn {
+  margin-left: 15px;
+}
+
+.btn.edit-btn {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.btn.btn.edit-btn:hover {
+  background: rgba(255, 255, 255, 0.5);
 }

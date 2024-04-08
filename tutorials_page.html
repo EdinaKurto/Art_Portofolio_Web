@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css" />
+<title>ArtWeb</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: url("Images/Backgrounds/Login_Registration_Background_5.jpg");
+    color: #333;
+    overflow: scroll;
+  }
+  
+  .container {
+    max-width: 1500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 120px;
+    
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  .image {
+    margin-bottom: 30px;
+    margin-top: 30PX;
+  }
+  .image img {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+</style>
+
+</head>
+<body>
+        <!-- Logo-->
+        <div class="logo_wrapper">
+            <nav class="nav">
+              <div class="nav-logo">
+                <p>ArtWeb</p>
+              </div>
+      
+              <!----------------------------- Main Menus ----------------------------------->
+              <nav role="navigation" class="nav-menu">
+                <ul>
+                  <li><a class="link" href="#view_home">Home</a></li>
+                  <li><a class="link" href="#view_comissions">Comission/Job</a></li>
+                  <li><a class="link" href="#view_tutorials">Tutorials</a></li>
+                  <li><a class="link" href="#view_my_profile">My Profile</a></li>
+      
+                </ul>
+              </nav>
+      
+              <!----------------------------- Login/Register Buttons ----------------------------------->
+      
+              <div class="nav-button">
+                <button class="btn white-btn" id="loginBtn" onclick="login()"> Login</button>
+                <button class="btn" id="registerBtn" onclick="register()">Register</button>
+              </div>
+              <div class="nav-menu-btn"><i class="bx bx-menu" onclick="myMenuFunction()"></i></div>
+            </nav>
+          </div>
+      
+          <!----------------------------- End of Login/Register Buttons ----------------------------------->
+
+          <div class="container">
+            <h1>Tutorial</h1>
+            <p>Digital painting is a versatile and rewarding form of artistic expression that allows you to create stunning artwork using digital tools and software. Whether you're a complete beginner or an experienced artist looking to explore new techniques, this tutorial will guide you through the basics of digital painting, from setting up your workspace to creating your first masterpiece.
+          
+              Materials Needed:
+              
+                  Computer or tablet with drawing software (e.g., Adobe Photoshop, Procreate, Krita)
+                  Graphics tablet (optional but recommended for more precise control)
+                  Digital painting brushes (included in most drawing software)
+              
+                  <div class="image">
+                    <img src="Images/Tutorials Page/2.jpg" alt="Digital Painting Workspace">
+                </div>
+            
+            <h2>Step 1: Setting Up Your Workspace</h2>
+
+            <p> Choose your digital painting software: There are several options available, each with its own features and capabilities. Some popular choices include Adobe Photoshop, Procreate (for iPad), and Krita (free and open-source).
+              Familiarize yourself with the interface: Take some time to explore the various tools, palettes, and menus within your chosen software. 
+              Understanding the layout of the interface will make it easier to navigate as you start painting. Customize your workspace: Most painting software allows you to customize the layout of your workspace to suit your preferences. 
+              Arrange your tools and palettes in a way that feels comfortable and intuitive for you.</p>
+          
+            <h2> Step 2: Choosing Your Brushes</h2>
+            <p> Experiment with different brush presets: Most digital painting software comes with a variety of brush presets that mimic traditional art tools like pencils, 
+              brushes, and charcoal. Take some time to experiment with different brushes to see which ones you prefer.
+              Customize your brushes: Many painting programs allow you to customize the properties of your brushes, such as size, opacity, and flow. 
+              Play around with these settings to create brushes that suit your style and needs.</p>
+
+              <div class="image">
+                <img src="Images/Tutorials Page/1.jpg" alt="Digital Painting Workspace">
+            </div>
+          
+            <h2>Step 3: Getting Started with Your Painting</h2>
+            <p>Choose a canvas size: Decide on the dimensions of your canvas before you begin painting. Consider factors like aspect ratio and resolution depending on the intended use of your artwork (e.g., printing, web).
+              Sketch your composition: Start by sketching out the basic shapes and forms of your subject using a light brush or pencil tool. This will serve as the foundation for your painting.
+              Block in colors: Once you're happy with your sketch, begin blocking in colors using a large, soft brush. Focus on establishing the overall color scheme and values of your painting.
+              Refine your painting: Gradually refine your painting by adding more details and textures using smaller brushes and varying levels of opacity. 
+              Pay attention to lighting, shadows, and highlights to create depth and dimension in your artwork.
+              Experiment with layers: Most painting software allows you to work with layers, which can be useful for organizing your artwork and making non-destructive edits. 
+              Experiment with different layer blending modes and layer effects to achieve the desired look for your painting.
+              Take breaks and experiment: Don't be afraid to take breaks and experiment with different techniques and approaches to digital painting. The more you practice, the more you'll develop your own unique style and workflow.</p>
+             
+              <h2>Step 4: Finalizing Your Painting</h2>
+              <p> Fine-tune your colors and values: Once you're satisfied with the overall look of your painting, take some time to fine-tune the colors and values to make sure everything looks cohesive.
+                Add finishing touches: Add any final details, highlights, or textures to bring your painting to life. Consider adding effects like blurs or glows to enhance certain elements of your artwork.
+                Save your work: Once you're happy with your painting, save it in a high-resolution format (e.g., JPEG, PNG) so that you can share it with others or print it out if desired.
+                Seek feedback: Don't hesitate to share your work with others and ask for feedback. Constructive criticism can help you improve as an artist and refine your skills further.</p>
+
+                <div class="image">
+                  <img src="Images/Tutorials Page/3.jpg" alt="Digital Painting Workspace">
+              </div>
+          
+            </div>
+
+<!----------------------------- Login/ Registration Menu ----------------------------------->
+<script>
+    function myMenuFunction() {
+      var i = document.getElementById("navMenu");
+      if (i.className === "nav-menu") {
+        i.className += " responsive";
+      } else {
+        i.className = "nav-menu";
+      }
+    }
+  </script>
+  <script>
+    var a = document.getElementById("loginBtn");
+    var b = document.getElementById("registerBtn");
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+
+    function login() {
+      window.location.href = "home_menu.html";
+    }
+    function register() {
+      window.location.href = "home_menu.html";
+    }
+  </script>
+
+</body>
+</html>
