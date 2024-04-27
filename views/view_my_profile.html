@@ -1,5 +1,8 @@
 <head>
   <link rel="stylesheet" href="assets/css/my-profile-style.css" />
+  <link rel="stylesheet" href="assets/css/artwork_modal.css" />
+  <link rel="stylesheet" href="assets/css/tutorial_modal.css" />
+
   <title>ArtWeb</title>
 </head>
 
@@ -8,6 +11,7 @@
   <section id="profile" class="profile">
     <div class="profile-header">
         <img id="profilePicture" alt="Profile Picture" class="profile-picture" style="height: 150px;">
+
         
         <div class="profile-information">
           <span id="profileName"><strong>Firstname Lastname</strong></span>
@@ -27,7 +31,80 @@
             <li><strong>ArtSkills:</strong> <span id="profileArtSkills">Example Text</span></li>
             <li><strong>Info:</strong> <span id="profileInfo">Example Text</span></li>
           </ul>
+
+          <button id="submitArtButton">Upload Art</button>
+
+          <button id="submitTutorialButton">Create Tutorial</button>
       </div>
+<!----------------------------- The ArtWork Modal----------------------------------->
+
+      <div id="edit_art_modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="editArtForm">
+                <label for="artName">Artwork Name:</label>
+                <input type="text" id="artName" name="artName" required><br><br>
+    
+                <label for="artSkill">Art Skill:</label>
+                <select id="artSkill" name="artSkill">
+                    <option value="begginer">Begginer</option>
+                    <option value="intermidiate">Intermidiate</option>
+                    <option value="advanced">Advanced</option>
+                </select><br><br>
+    
+                <label for="artDescription">Description:</label><br>
+                <textarea id="artDescription" name="artDescription" rows="4" cols="50" required></textarea><br><br>
+    
+                <label for="artFilter">Filter:</label>
+                <select id="artFilter" name="artFilter">
+                    <option value="abstract">Abstract</option>
+                    <option value="animal">Animals</option>
+                    <option value="anime">Anime</option>
+                    <option value="architecture">Architecture</option>
+                    <option value="blender">Blender</option>
+                    <option value="character_design">Character Design</option>
+                    <option value="comics">Comics</option>
+                    <option value="fan_art">Fan Art</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="fasion">Fasion</option>
+                    <option value="horror">Horror</option>
+                    <option value="portrait">Portrait</option>
+                    <option value="realism">Realism</option>
+                    <option value="sketch">Sketch</option>
+                    <option value="still_life">Still Life</option>
+                    <option value="storyboard">Storyboard</option>
+                </select><br><br>
+                <!----- Image from Device----->
+                <label for="artImages">Image Upload:</label>
+                <input type="file" id="artImages" name="artImages" accept="image/*" multiple><br><br>
+
+    
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+  <!----------------------------- The Tutorial Modal----------------------------------->
+  <div id="edit_tutorial_modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <form id="editTutorialForm">
+            <label for="tutorName">Tutorial Title:</label>
+            <input type="text" id="tutorName" name="tutorName" required><br><br>
+            <label for="tutorName">Tutorial By:</label>
+            <input type="text" id="tutorName" name="tutorName" required><br><br>
+
+            <label for="tutorialDescription">Description:</label><br>
+            <textarea id="tutorialDescription" name="tutorialDescription" rows="4" cols="50" required></textarea><br><br>
+
+            <label for="artWebsite">Website URL:</label>
+            <input type="url" id="artWebsite" name="artWebsite" required><br><br>
+            
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
 
       <!----------------------------- The Function Tab ----------------------------------->
       <div class="work-images">
@@ -49,6 +126,40 @@
       </div>
     </div>
   </section>
+
+  <script>
+    // Function to display the modal popup
+    function displayModal(modalId) {
+      document.getElementById(modalId).style.display = 'block';
+    }
+  
+    document.getElementById('submitArtButton').addEventListener('click', function() {
+      displayModal('edit_art_modal');
+    });
+
+    document.getElementById('submitTutorialButton').addEventListener('click', function() {
+      displayModal('edit_tutorial_modal');
+    });
+  
+    // Close the modal when the user clicks on the close button (x)
+    document.querySelectorAll('.modal .close').forEach(closeButton => {
+      closeButton.addEventListener('click', function() {
+        const modalId = this.closest('.modal').id;
+        document.getElementById(modalId).style.display = 'none';
+      });
+    });
+  
+    // Close the modal when the user clicks outside 
+    window.addEventListener('click', function(event) {
+      document.querySelectorAll('.modal').forEach(modal => {
+        if (event.target == modal) {
+          modal.style.display = 'none';
+        }
+      });
+    });
+  </script>
+
+  
 
   <script>
     function openTab(tabName) {
